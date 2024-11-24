@@ -23,7 +23,7 @@ function App() {
     try {
       const response = await fetch(`${import.meta.env.VITE_WEATHER_SERVICE_URL}/${city}?key=${import.meta.env.VITE_WEATHER_API_KEY}&include=current&contentType=json`);
       const data = await response.json();   
-      console.log('data', data);
+      
       setWeatherData(data);
     } catch (error) {
       console.error('Error fetching weather data:', error);
